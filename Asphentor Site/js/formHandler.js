@@ -21,17 +21,22 @@ async function handleSubmit(event) {
                  `**Issue:** ${data.issue}`
     };
 
-    // Send data to Discord webhook
     try {
-        await fetch('https://discord.com/api/webhooks/1272138466599112715/AcQRJWUJdRpfQ6YT03tltfFNS3EWftB_zRe4JKSuY7Y8H6y0iFRqBaUmNAsiLSAOakuw', {
+        // Send data to your backend or proxy server
+        const response = await fetch('https://your-backend-url.com/send-report', { // Update this URL to your backend or proxy server
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(message)
         });
-        alert('Bug report submitted successfully!');
-        event.target.reset(); // Reset the form
+
+        if (response.ok) {
+            alert('Bug report submitted successfully!');
+            event.target.reset(); // Reset the form
+        } else {
+            throw new Error('Network response was not ok.');
+        }
     } catch (error) {
         console.error('Error submitting bug report:', error);
         alert('Failed to submit bug report. Please try again.');
