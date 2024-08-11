@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Ensure scrollbar appears if needed */
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    color: #fff;
+}
+
+.sidebar-button {
+    display: block;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    width: calc(100% - 20px); /* Adjust width to fit padding */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none; /* Remove default border */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.sidebar-button:hover {
+    background-color: #777;
+}
+
+.main-content {
+    background-color: rgb(63, 63, 63);
+    color: white;
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Styles for the dev grid */
+.dev-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center cards horizontally */
+}
+
+.dev-card {
+    display: block;
+    width: 150px;
+    text-align: center;
+    text-decoration: none; /* Remove underline from links */
+    color: #ffffff; /* Default text color */
+}
+
+.dev-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners for images */
+}
+
+.dev-name {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.dev-type {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+.profile-preview {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5%;
+    margin: 16px;
+}
+
+.profile-info {
+    padding: 16px;
+}
+
+.profile-name {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.profile-type {
+    margin: 0;
+    font-size: 1em;
+    color: #777;
+}
