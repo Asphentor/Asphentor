@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: auto;
-    height: 250vh; /* Full viewport height */
+    height: 280vh; /* Full viewport height */
 }
 
 .container {
