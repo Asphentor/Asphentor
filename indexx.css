@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: rgb(63, 63, 63);
 }
 
 .sidebar {
@@ -130,4 +131,40 @@ body {
     margin: 0;
     font-size: 1.5em; /* Increase font size */
     color: #777;
+}
+
+
+.actions-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #ff0000ec;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px; /* Space from other elements */
+    cursor: pointer;
+}
+
+.actions-button:hover {
+    background-color: #ce0000; /* Darker shade on hover */
+}
+
+
+/* Style the scrollbar container */
+::-webkit-scrollbar {
+    width: 3px; /* Change this to your preferred width */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: #fc0000; /* Scrollbar color */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #c0c0c0; /* Track color */
 }
