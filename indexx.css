@@ -55,7 +55,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px; /* Space between cards */
-    justify-content: center; /* Center cards horizontally */
+    justify-content: flex-start; /* Align cards to the left */
 }
 
 .dev-card {
@@ -86,37 +86,48 @@ body {
 
 
 
+
+.profile-container {
+    display: flex;
+    flex-direction: column; /* Stack profile previews vertically */
+    align-items: center; /* Center the previews horizontally */
+}
+
 .profile-preview {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     background-color: #ffffff;
-    border: 1px solid #ddd;
+    border: 0px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 1000px; /* Fixed width, but will adapt if the content exceeds */
+    max-width: 100%; /* Ensure it scales well on different devices */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 20px 0; /* Margin between each profile preview */
+    padding: 20px; /* Padding inside for content spacing */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
 .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 200px; /* Increase the image size */
+    height: 200px;
     object-fit: cover;
-    border-radius: 5%;
-    margin: 16px;
+    border-radius: 10%; /* Slightly adjust the border radius */
+    margin-right: 20px; /* Margin to separate image from text */
 }
 
 .profile-info {
-    padding: 16px;
+    flex: 1; /* Allow the info section to take up available space */
 }
 
 .profile-name {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 4em; /* Increase font size */
     color: #333;
 }
 
 .profile-type {
     margin: 0;
-    font-size: 1em;
+    font-size: 1.5em; /* Increase font size */
     color: #777;
 }
